@@ -45,9 +45,9 @@ $port = $data->{ms}->{port};
 $server = $data->{ms}->{addr};
 $thread_id = $data->{ms}->{thread};
 
-print "port:$port";
-print "addr:$server";
-print "thread:$thread_id";
+#print "port:$port";
+#print "addr:$server";
+#print "thread:$thread_id";
 
 # postデータ作成/準備
 my $post_data = "<thread res_from=\"-100\" version=\"20061206\" thread=\"$thread_id \" />\0";
@@ -55,7 +55,7 @@ my $selecter = IO::Select->new;
 
 # 各サーバのソケットを生成
 my $sock = IO::Socket::INET->new("$server:$port");
-print Dumper $sock;
+#print Dumper $sock;
 
 
 # ソケットの追加
